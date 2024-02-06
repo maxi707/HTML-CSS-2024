@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Адаптивный Веб-сайт</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav {
+      background-color: #555;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .image-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .image-container img {
+      max-width: 30%;
+      height: auto;
+      border-radius: 8px;
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 20px;
+      position: relative;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: block;
+      padding: 10px;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: #555;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    .dropdown a {
+      color: #fff;
+      padding: 10px;
+      display: block;
+    }
+
+    nav li:hover .dropdown {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Адаптивный Веб-сайт</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">О нас</a></li>
+      <li>
+        <a href="#">Сервисы</a>
+        <div class="dropdown">
+          <a href="#">Веб-разработка</a>
+          <a href="#">Дизайн</a>
+          <a href="#">Маркетинг</a>
+        </div>
+      </li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="container">
+      <div class="card">
+        <h2>Привет, мир!</h2>
+        <p>Добро пожаловать на наш адаптивный веб-сайт. Здесь вы найдете интересные материалы и возможности для взаимодействия.</p>
+      </div>
+
+      <div class="card">
+        <h2>Интерактивные элементы</h2>
+        <button onclick="alert('Привет!')">Нажми меня</button>
+        <input type="text" placeholder="Введите что-то">
+        <a href="#" class="button">Нажми меня тоже</a>
+      </div>
+
+      <div class="card">
+        <h2>Изображения</h2>
+        <div class="image-container">
+          <img src="1.jpg" alt="Изображение 1">
+        </div>
+      </div>
+
+      <div class="card video-container">
+        <h2>Видео-контент</h2>
+        <iframe width="560" height="315" src="file_example_MP4_1920_18MG.mp4" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="card">
+        <h2>Аудио-контент</h2>
+        <audio controls>
+          <source src="vitali-gnoutov-rimskijj-korsakov-le-vol-du-bourdon.mp3" type="audio/mp3">
+          Ваш браузер не поддерживает аудио элемент.
+        </audio>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2024 Адаптивный Веб-сайт. Все права защищены.
+  </footer>
+</body>
+</html>
